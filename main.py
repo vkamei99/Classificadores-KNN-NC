@@ -14,10 +14,11 @@ def main():
     parser.add_argument("config_path", type= str)#arquivo de configuração
     parser.add_argument("report_path", type= str)#arquivo de saida da linha de comando
     argumentos = parser.parse_args()
-    
+
     # le o arquivo json e retorna como um dicionario
     config = load_config(argumentos.config_path)
-
+    
+    #cria os datasets de acordo com o que foi passado no arquivo json
     train_dataset = create_dataset(config["train_path"], config["type"])
     test_dataset = create_dataset(config["test_path"], config["type"])
     classifier = create_classifier(config["classifier"])
