@@ -17,6 +17,6 @@ class ImageDataset(DatasetInterface):
         return 0
 
     def get(self, idx: int) -> Tuple[Any, str]:
-        # ler a i-esima imagem do disco usando a biblioteca cv2 e retornar
-        # a imagem e a respectiva classe
+        # ler a i-esima imagem do disco usando a biblioteca cv2 e retorna a imagem e a respectiva classe
         return 0, ""
+
