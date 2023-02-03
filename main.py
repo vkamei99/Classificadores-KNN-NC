@@ -11,11 +11,10 @@ from src.io.report import write_report
 def main():
     # obter os nomes dos arquivos de configuracao e de saida da linha de comando
     parser = argparse.ArgumentParser()
-    parser.add_argument("config_path", type= str)
-
-    parser.add_argument("report_path", type= str)
-    
+    parser.add_argument("config_path", type= str)#arquivo de configuração
+    parser.add_argument("report_path", type= str)#arquivo de saida da linha de comando
     argumentos = parser.parse_args()
+    
     # le o arquivo json e retorna como um dicionario
     config = load_config(argumentos.config_path)
 
