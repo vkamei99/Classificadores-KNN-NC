@@ -8,6 +8,9 @@ class ImageDataset(DatasetInterface):
         super().__init__(path)
         # ler arquivo contendo os nomes das imagens e as classes e armazenar
         # em uma lista
+        self.path = path
+        self.image_name = []
+        self.image_class = []
 
     def size(self) -> int:
         # retornar tamanho do dataset (numero de linhas do arquivo)
