@@ -16,11 +16,11 @@ class ImageDataset(DatasetInterface):
                 self.image_class.append(image_class)
 
     def size(self) -> int:
-        # retornar tamanho do dataset (numero de linhas do arquivo)
+        # retorna tamanho do dataset (numero de linhas do arquivo)
         return len(self.image_name)
 
     def get(self, idx: int) -> Tuple[Any, str]:
-        # ler a i-esima imagem do disco usando a biblioteca cv2 e retorna a imagem e a respectiva classe
+        # le a i-esima imagem do disco usando a biblioteca cv2 e retorna a imagem e a respectiva classe
         return 0, ""
 
 '''
