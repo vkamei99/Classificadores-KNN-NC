@@ -6,8 +6,7 @@ from .dataset_interface import DatasetInterface
 class ImageDataset(DatasetInterface):
     def __init__(self, path: str) -> None:
         super().__init__(path)
-        # ler arquivo contendo os nomes das imagens e as classes e armazenar
-        # em uma lista
+        # ler arquivo contendo os nomes das imagens e as classes e armazenar em uma lista
         self.path = path
         self.image_name = []
         self.image_class = []
