@@ -15,8 +15,9 @@ def main():
     
     # le o arquivo json e retorna como um dicionario
     config = load_config(argumentos.config_path)
-    train_dataset = create_dataset(config["train_path"], config["type"])
+    train_dataset = create_dataset(config["test_path"], config["type"])
     print(train_dataset.size())
+    print(train_dataset.image_name)
 
     
 
