@@ -1,5 +1,6 @@
 from typing import Tuple, Any, Dict
 from .dataset_interface import DatasetInterface
+import cv2
 
 class ImageDataset(DatasetInterface):
     def __init__(self, path: str) -> None:
@@ -21,6 +22,15 @@ class ImageDataset(DatasetInterface):
 
     def get(self, idx: int) -> Tuple[Any, str]:
         # le a i-esima imagem do disco usando a biblioteca cv2 e retorna a imagem e a respectiva classe
+        
+        # "data/datasets/img/train(ou test).txt" --> "data/datasets/img/train/train(ou test)/"
+        nome_pasta = self.path.split("/")[-1] #divide e seleciona o ultimo elemento da string (train.txt)
+        nome_pasta = nome_pasta[:-4] #tira os 4 ultimos elementos da string
+        
+        new_path = self.path[:-4]
+        new_path += /
+        new_path = new_path + nome_pasta + / #"data/datasets/img/train/train(ou test)/"
+
         return 0, ""
 
 '''
