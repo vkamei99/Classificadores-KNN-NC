@@ -7,19 +7,15 @@ from src.io.config import load_config
 from src.io.report import write_report
 
 def main():
-    # obter os nomes dos arquivos de configuracao e de saida da linha de comando
     parser = argparse.ArgumentParser()
-    parser.add_argument("config_path", type= str)#arquivo de configuração
-    parser.add_argument("report_path", type= str)#arquivo de saida da linha de comando
+    parser.add_argument("config_path", type= str)
+    parser.add_argument("report_path", type= str)
     argumentos = parser.parse_args()
     
-    # le o arquivo json e retorna como um dicionario
     config = load_config(argumentos.config_path)
-    train_dataset = create_dataset(config["test_path"], config["type"])
-    print(train_dataset.size())
-    print(train_dataset.image_name)
-
+    train_dataset = create_dataset(config["train_path"], config["type"])
     
-
+    print(train_dataset.get(1))
+    
 if __name__ == "__main__":
     main()
