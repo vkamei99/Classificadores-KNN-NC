@@ -1,6 +1,7 @@
 from typing import Tuple, Any, Dict
 from .dataset_interface import DatasetInterface
 import cv2
+import numpy as np
 
 class ImageDataset(DatasetInterface):
     def __init__(self, path: str) -> None:
@@ -13,7 +14,7 @@ class ImageDataset(DatasetInterface):
         with open(path, 'r') as f:
             for line in f:
                 image_name, image_class = line.split()
-                self.image_name.append(image_name)
+                self.image_name.append(image_name[-7:])
                 self.image_class.append(image_class)
 
     def size(self) -> int:
@@ -23,15 +24,12 @@ class ImageDataset(DatasetInterface):
     def get(self, idx: int) -> Tuple[Any, str]:
         # le a i-esima imagem do disco usando a biblioteca cv2 e retorna a imagem e a respectiva classe
         
-        # "data/datasets/img/train(ou test).txt" --> "data/datasets/img/train/train(ou test)/"
-        nome_pasta = self.path.split("/")[-1] #divide e seleciona o ultimo elemento da string (train.txt)
-        nome_pasta = nome_pasta[:-4] #tira os 4 ultimos elementos da string
-        
-        new_path = self.path[:-4]
-        new_path += /
-        new_path = new_path + nome_pasta + / #"data/datasets/img/train/train(ou test)/"
+        new_path = self.path[:-4] + "/" + self.image_name[idx]#"data/datasets/img/train(ou test).txt" --> "data/datasets/img/train/image[idx]"
 
-        return 0, ""
+        img = cv2.imread(new_path, cv2.IMREAD_GRAYSCALE)#carrega a imagem em tons de cinza
+        img_vector = np.ndarray.flatten(img)
+
+        return img_vector.tolist(), self.image_class[idx]
 
 '''
 A interface de datasets define
