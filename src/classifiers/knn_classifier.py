@@ -23,13 +23,18 @@ class KnnClassifier(ClassifierInterface):
         retornar a classe mais frequente entre eles """
         
         k = 5
+        distancia = []
         #guardando as amostras do test em uma lista
         self.tam_test = test_dataset.size()
         for i in range(self.tam_test):
             self.test_amostras.append(test_dataset.get(i))
-        
-        
 
-
-
+        for i in range(self.tam_test):
+            for j in range(self.tam_train):
+                somatorio = 0
+                for x in range(len(self.test_amostras[0][0])):
+                    somatorio += (self.test_amostras[i][0][x] - self.train_amostras[j][0][x]) ** 2
+                dist = (somatorio)**1/2
+                distancia.append(dist)
+                           
         return []
