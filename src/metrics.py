@@ -13,6 +13,6 @@ def accuracy(true_classes: List[str], predicted_classes: List) -> float:
         if true_classes[i] == predicted_classes[i]:
             acertos += 1
     
-    porcentagem = (acertos*100)/quantidade
+    porcentagem = (acertos)/quantidade
 
     return porcentagem
