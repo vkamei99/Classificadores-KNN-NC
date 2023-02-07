@@ -22,8 +22,10 @@ class KnnClassifier(ClassifierInterface):
         """ para cada amostra no dataset, buscar os k vizinhos mais proximos e 
         retornar a classe mais frequente entre eles """
         
-        k = 5
+        K = 5
         distancia = []
+        classes = []
+        
         #guardando as amostras do test em uma lista
         self.tam_test = test_dataset.size()
         for i in range(self.tam_test):
@@ -34,19 +36,20 @@ class KnnClassifier(ClassifierInterface):
             for j in range(self.tam_train):
                 somatorio = 0
                 for x in range(len(self.test_amostras[i][0])):
-                    somatorio += (self.test_amostras[i][0][x] - self.train_amostras[j][0][x]) ** 2
+                    somatorio += (self.train_amostras[j][0][x] - self.test_amostras[i][0][x]) ** 2
                 dist = (somatorio)**1/2
-                distancia.append(dist)
+                distancia.append((dist, self.train_amostras[j][1]))
         
-        #ve os 5 pontos com menor distancia
-        menor =[(distancia[0], 0)]
-        for i in range(k):
-            for j in range(len(distancia)):
-                if distancia[j] < menor[i][0]:
-                    menor.append((distancia[j], j))
-                    distancia.pop(j)
+        #ve os 5 pontos com menor distancia de cada teste e salva seus index em uma lista de listas
+        menor = []
+        menor_dist = distancia[0]
+        for i in range(self.tam_test):
+            for j in range(k):
+                for k in range(len(distancia)):
+                    if menor_dist<distancia[k]:
+                        menor.append(k)
+                    
 
-        
-
+                
 
         return []
