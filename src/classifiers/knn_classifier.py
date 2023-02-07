@@ -41,15 +41,38 @@ class KnnClassifier(ClassifierInterface):
                 distancia.append((dist, self.train_amostras[j][1]))
         
         #ve os 5 pontos com menor distancia de cada teste e salva seus index em uma lista de listas
-        menor = []
-        menor_dist = distancia[0]
+        # explicação abaixo*
+        closest_k = []
         for i in range(self.tam_test):
-            for j in range(k):
-                for k in range(len(distancia)):
-                    if menor_dist<distancia[k]:
-                        menor.append(k)
-                    
+            distances_for_sample = [(idx, d) for idx, d in enumerate(distancia) if idx // self.tam_train == i]
+            distances_for_sample.sort(key=lambda x: x[1])
+            closest_k.append([x[0] for x in distances_for_sample[:K]])
 
-                
+        classifier = []
+        for indices in closest_k:
+            class_count = {}
+            for idx in indices:
+                class_ = distancia[idx][1]
+                if class_ not in class_count:
+                    class_count[class_] = 0
+                class_count[class_] += 1
+            classifier.append(max(class_count, key=class_count.get))
 
-        return []
+        return classifier
+
+        '''
+        *A primeira parte encontra os índices das k distâncias mais próximas para cada amostra de teste. 
+        Ela cria uma lista closest_k, onde cada elemento é uma lista de índices. 
+        Esses índices são obtidos filtrando a lista de distâncias (distances) 
+        e mantendo apenas aqueles que estão associados a cada amostra de teste (idx // self.train_size == i). 
+        A lista resultante é então classificada pelo valor da distância (distances_for_sample.sort (key = lambda x: x [1])) 
+        e os k índices mais próximos são selecionados (closest_k.append ([x [0] for x in distances_for_sample [: K]])).
+
+        A segunda parte encontra a classe mais frequente entre os k vizinhos mais próximos. 
+        Isso é feito percorrendo a lista closest_k e para cada lista de índices (indices) associados a cada amostra de teste, 
+        ela conta quantas vezes cada classe aparece na lista de distâncias associada aos índices (class_count). 
+        A classe com a contagem mais alta é determinada (classifier.append (max (class_count, key = class_count.get))) 
+        e é adicionada a uma lista classifier. 
+        
+        Finalmente, a lista classifier é retornada como resultado da previsão.
+        '''
