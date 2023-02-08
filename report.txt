@@ -1,6 +1,6 @@
-dataset: image
-                   path: data/datasets/img_small/train.txt
+dataset: news
+                   path: data/datasets/news-small/train.txt
                    classifier: knn
-                   training time per sample:{'accuracy': 0.8666666666666667}
-                   inference time per sample:{'accuracy': 0.8666666666666667}
-                   accuracy:{'accuracy': 0.8666666666666667}
+                   training time per sample:{'accuracy': 0.4}
+                   inference time per sample:{'accuracy': 0.4}
+                   accuracy:{'accuracy': 0.4}
