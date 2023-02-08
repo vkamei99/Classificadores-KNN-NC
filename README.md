@@ -18,7 +18,7 @@ Windows:
 para instalar a biblioteca, você precisa ter o Python e o pip (gerenciador de pacotes do Python) já instalados em seu sistema. Se você ainda não os tem, siga as instruções de instalação relevantes para o seu sistema operacional antes de prosseguir com a instalação da biblioteca OpenCV.
 
 # Como Usar
-* Entradas e Saídas do programa
+* Entrada do programa
 
 O programa deverá ser executado usando a linha de comando abaixo:
 
@@ -26,15 +26,19 @@ O programa deverá ser executado usando a linha de comando abaixo:
     python main.py data/configs/config.json data/reports/report.txt
 
 
-na qual, config.json é um arquivo de configuração contendo informações de entrada para o programa e report.txt é o caminho do arquivo onde os dados de saída do experimento devem ser salvos.
+na qual, config.json é um arquivo de configuração contendo informações de entrada para o programa e report.txt é o caminho do arquivo onde os dados de saída do experimento devem ser salvos. Segue abaixo como usá-los.
 
-No diretório data/configs, existe um arquivo de configuração ja pronto. Você deve mudá-lo para testar o outro algoritmo ou dataset segue abaixo como usá-lo de forma que funcione com o codigo.
+* Mudando o Dataset e o Algoritimo:
 
-O arquivo config.json receberá como entrada um arquivo de configuração do tipo JSON como ilustrado abaixo. O campo “type” indica o tipo do dataset que pode ser “image”(dataset de imagens) ou “news”(dataset de texto). 
+No diretório data/configs, existe um arquivo de configuração ja pronto. Você deve mudá-lo para testar o outro algoritmo ou o outro dataset segue abaixo como usá-lo de forma coerente com o codigo.
 
-Os campos “train_path” e “test_path” contém o caminho para arquivos .txt que contém em cada linha o nome de um arquivo de imagem ou notícia e a respectiva classe. Um exemplo é dado a seguir. A mesma pasta que contém os arquivos train.txt e test.txt também contém pastas “train” e “test” e nelas estão armazenados os arquivos de imagens e notícias (veja, por exemplo, o diretório data/datasets/news-tiny). Por fim, o campo “classifier” indica qual classificador deve ser usado pelo programa (“knn” ou “nc”). 
+* O campo “type” indica o tipo do dataset que pode ser “image”(dataset de imagens) ou “news”(dataset de texto). 
 
-Uma execução do programa consiste em avaliar um classificador específico em uma base de dados específica.
+* Os campos “train_path” e “test_path” contém o caminho para arquivos .txt que em cada linha contém o nome de um arquivo de imagem ou notícia e a respectiva classe (um exemplo é dado a seguir). *A mesma pasta contém pastas “train” e “test” nelas que estão armazenados os arquivos de imagens e notícias.* Mudando esses caminhos você deve passar o dataset novo ex: data/datasets/img_medium/train.txt
+
+* Por fim, o campo “classifier” indica qual classificador deve ser usado pelo programa (“knn” ou “nc”). 
+
+Exemplo do config.json
 
     config.json
     {
@@ -46,7 +50,6 @@ Uma execução do programa consiste em avaliar um classificador específico em u
 
 exemplo do train.txt:
 
-    train.txt
     train/c3719052006int.txt int
     train/3903082005int.txt int
     train/3829042006int.txt int
@@ -54,8 +57,11 @@ exemplo do train.txt:
     train/3502072006pot.txt pot
     train/b1602062006poc.txt poc
     train/c1906052005poc.txt poc
+    #estes são os nomes dos arquivos de noticia
  
-O arquivo de saída (report.txt no exemplo) deve armazenar a acurácia do classificador, o tempo de treinamento por amostra (tempo total de treino / número de amostras no treino) e o tempo de predição por amostra (tempo total de predição / número de amostras de teste). Um exemplo é dado abaixo:
+* O arquivo de saída 
+
+vai armazenar a acurácia do classificador, o tempo de treinamento por amostra e o tempo de predição por amostra . Um exemplo é dado abaixo:
 
     report.txt
     dataset: image
