@@ -17,7 +17,7 @@ Uma execução do programa consiste em avaliar um classificador específico em u
         "test_path": "data/datasets/img_small/test.txt",
         "classifier": "knn"
     }
- 
+exemplo do train.txt:
     train.txt
     train/c3719052006int.txt int
     train/3903082005int.txt int
