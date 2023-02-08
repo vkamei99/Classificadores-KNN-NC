@@ -1,6 +1,6 @@
 dataset: news
                    path: data/datasets/news-small/train.txt
                    classifier: knn
-                   training time per sample:{'accuracy': 0.4}
-                   inference time per sample:{'accuracy': 0.4}
-                   accuracy:{'accuracy': 0.4}
+                   training time per sample:{'accuracy': 0.4, 'training_time_per_sample': 0.016128031412760417, 'inference_time_per_sample': 0.018037915229797363}
+                   inference time per sample:{'accuracy': 0.4, 'training_time_per_sample': 0.016128031412760417, 'inference_time_per_sample': 0.018037915229797363}
+                   accuracy:{'accuracy': 0.4, 'training_time_per_sample': 0.016128031412760417, 'inference_time_per_sample': 0.018037915229797363}

@@ -26,9 +26,9 @@ class Experiment:
         predicit_to = time.time()
 
         metrics = {
-            "accuracy": accuracy(self.true_classes, pred_classes)
-            "training_time_per_sample": (treino_to - treino_t)/self.test_dataset.size()
-            "inference_time_per_sample": (predicit_to-predicit_t)/self.train_dataset.size()
+            "accuracy": accuracy(self.true_classes, pred_classes),
+            "training_time_per_sample": (treino_to - treino_t)/self.test_dataset.size(),
+            "inference_time_per_sample": (predicit_to-predicit_t)/self.train_dataset.size(),
         }
 
         return metrics
