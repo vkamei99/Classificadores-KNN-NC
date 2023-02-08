@@ -4,12 +4,12 @@ O trabalho consiste em criar um programa que permita comparar a performance de d
 # Instalação
 Para poder rodar deve se instalar a biblioteca OpenCV que pode ser instalada com o seguintes comandos:
 
-Linux
+Linux:
 
     sudo apt-get update
     sudo apt-get install python3-opencv
 
-Windows
+Windows:
 
     pip install opencv-python
 
@@ -57,7 +57,7 @@ O arquivo de saída (report.txt no exemplo) deve armazenar a acurácia do classi
 
 # Observações
 * O projeto possui seu proprio sistema para vetorização de imagems e textos
-* Foi usado um template dado pelo professor
+* Para ajudar na organização do projeto foi usado um template dado pelo professor: Filipe Mutz
 
 # Autores
 Este projeto foi feito por:
