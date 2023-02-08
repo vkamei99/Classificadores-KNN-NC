@@ -1,6 +1,6 @@
-dataset: news
-path: data/datasets/news-small/train.txt
-classifier: knn
-training time per sample: 0.027398157119750976s
-inference time per sample: 0.027580539385477703s
-accuracy: 0.4
+dataset: image
+path: data/datasets/img_small/train.txt
+classifier: nc
+training time per sample: 0.000998s
+inference time per sample: 0.000100s
+accuracy: 0.3333333333333333
