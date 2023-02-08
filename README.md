@@ -3,7 +3,7 @@ O trabalho consiste em criar um programa que permita comparar a performance de d
 
 # Como Usar
 O programa deverá ser executado usando a linha de comando abaixo:
- python main.py data/configs/config.json data/reports/report.txt
+     python main.py data/configs/config.json data/reports/report.txt
 na qual, config.json é um arquivo de configuração contendo informações de entrada para o programa e report.txt é o caminho do arquivo onde os dados de saída do experimento devem ser salvos. No diretório data/configs, existe 1 arquivo de configuração ja pronto.
 
 O arquivo config.json receberá como entrada um arquivo de configuração do tipo JSON como ilustrado abaixo. O campo “type” indica o tipo do dataset que pode ser “image” ou “news” (notícias). 
