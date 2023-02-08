@@ -2,7 +2,7 @@
 O trabalho consiste em criar um programa que permita comparar a performance de dois algoritmos de classificação (KNN, NC) em duas bases de dados diferentes: imagens(sem cores) e noticias(textos).
 
 # Instalação
-Para poder rodar deve se instalar a biblioteca OpenCV que pode ser instalada com o seguintes comandos:
+Para poder rodar deve se instalar a biblioteca OpenCV e NunPy que pode ser instalada com os seguintes comandos:
 
 Linux:
 
