@@ -1,6 +1,0 @@
-dataset: image
-path: data/datasets/img_small/train.txt
-classifier: nc
-training time per sample: 0.000998s
-inference time per sample: 0.000100s
-accuracy: 0.3333333333333333
