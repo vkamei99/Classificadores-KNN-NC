@@ -36,7 +36,7 @@ No diretório data/configs, existe um arquivo de configuração ja pronto. Você
 
 ### Os campos “train_path” e “test_path” contém o caminho para arquivos .txt que em cada linha contém o nome de um arquivo de imagem ou notícia e a respectiva classe (um exemplo é dado a seguir). *A mesma pasta contém pastas “train” e “test” nelas que estão armazenados os arquivos de imagens e notícias.* Mudando esses caminhos você deve passar o dataset novo ex: data/datasets/img_medium/train.txt
 
-### Por fim, o campo “classifier” indica qual classificador deve ser usado pelo programa (“knn” ou “nc”). 
+### * Por fim, o campo “classifier” indica qual classificador deve ser usado pelo programa (“knn” ou “nc”). 
 
 Exemplo do config.json
 
