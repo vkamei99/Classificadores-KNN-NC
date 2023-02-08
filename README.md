@@ -19,9 +19,12 @@ para instalar a biblioteca, você precisa ter o Python e o pip (gerenciador de p
 
 # Como Usar
 * Entradas e Saídas do programa
+
 O programa deverá ser executado usando a linha de comando abaixo:
 
+
     python main.py data/configs/config.json data/reports/report.txt
+    
 
 na qual, config.json é um arquivo de configuração contendo informações de entrada para o programa e report.txt é o caminho do arquivo onde os dados de saída do experimento devem ser salvos. No diretório data/configs, existe 1 arquivo de configuração ja pronto.
 
