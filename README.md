@@ -59,7 +59,7 @@ exemplo do train.txt:
     train/c1906052005poc.txt poc
     #estes são os nomes dos arquivos de noticia
  
-* O arquivo de saída 
+## O arquivo de saída 
 
 vai armazenar a acurácia do classificador, o tempo de treinamento por amostra e o tempo de predição por amostra . Um exemplo é dado abaixo:
 
