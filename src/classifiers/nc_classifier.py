@@ -13,19 +13,34 @@ class NearestCentroidClassifier(ClassifierInterface):
         self.test_data = []#armazena os dados de teste
         
     def train(self, train_dataset: DatasetInterface) -> None:
+        """ calcular os centroides por classe """
         # Armazenando todos os dados de treinamento na lista data_points
-        self.data_points = [train_dataset.get(i) for i in range(train_dataset.size())]
+        for i in range(train_dataset.size()):
+            self.data_points.append(train_dataset.get(i))
 
         # Armazenando todas as classes dos dados de treinamento na lista classes
-        self.classes = list(set(point[1] for point in self.data_points))
+        for point in self.data_points:
+            if point[1] not in self.classes:
+                self.classes.append(point[1])
 
         # Armazenando os vetores de dados na lista data_vectors
-        self.data_vectors = [[point[0] for point in self.data_points if point[1] == class_name] for class_name in self.classes]
+        for class_name in self.classes:
+            class_points = []
+            for point in self.data_points:
+                if point[1] == class_name:
+                    class_points.append(point[0])
+            self.data_vectors.append(class_points)
 
         # Cálculo dos centróides a partir dos vetores de dados
-        self.centroids = [[sum(vector[j] for vector in class_vectors)/len(class_vectors) for j in range(len(class_vectors[0]))] for class_vectors in self.data_vectors]
+        for class_vectors in self.data_vectors:
+            centroid = []
+            for j in range(len(class_vectors[0])):
+                sum_of_vectors = sum(vector[j] for vector in class_vectors)
+                centroid.append(sum_of_vectors / len(class_vectors))
+            self.centroids.append(centroid)
 
     def predict(self, test_dataset: DatasetInterface) -> List[str]:
+        """ para cada amostra no dataset, buscar o centroide mais proximo e respectiva retornar a classe """
         # Armazenando todos os dados de teste na lista test_data
         self.test_data = [test_dataset.get(i) for i in range(test_dataset.size())]
 
