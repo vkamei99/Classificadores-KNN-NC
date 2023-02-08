@@ -18,7 +18,7 @@ Windows:
 para instalar a biblioteca, você precisa ter o Python e o pip (gerenciador de pacotes do Python) já instalados em seu sistema. Se você ainda não os tem, siga as instruções de instalação relevantes para o seu sistema operacional antes de prosseguir com a instalação da biblioteca OpenCV.
 
 # Como Usar
-### Entrada do programa
+## Entrada do programa
 
 O programa deverá ser executado usando a linha de comando abaixo:
 
@@ -28,13 +28,13 @@ O programa deverá ser executado usando a linha de comando abaixo:
 
 na qual, config.json é um arquivo de configuração contendo informações de entrada para o programa e report.txt é o caminho do arquivo onde os dados de saída do experimento devem ser salvos. Segue abaixo como usá-los.
 
-### Mudando o Dataset e o Algoritimo:
+## Mudando o Dataset e o Algoritimo:
 
 No diretório data/configs, existe um arquivo de configuração ja pronto. Você deve mudá-lo para testar o outro algoritmo ou o outro dataset segue abaixo como usá-lo de forma coerente com o codigo.
 
-* O campo “type” indica o tipo do dataset que pode ser “image”(dataset de imagens) ou “news”(dataset de texto). 
+### O campo “type” indica o tipo do dataset que pode ser “image”(dataset de imagens) ou “news”(dataset de texto). 
 
-* Os campos “train_path” e “test_path” contém o caminho para arquivos .txt que em cada linha contém o nome de um arquivo de imagem ou notícia e a respectiva classe (um exemplo é dado a seguir). *A mesma pasta contém pastas “train” e “test” nelas que estão armazenados os arquivos de imagens e notícias.* Mudando esses caminhos você deve passar o dataset novo ex: data/datasets/img_medium/train.txt
+### Os campos “train_path” e “test_path” contém o caminho para arquivos .txt que em cada linha contém o nome de um arquivo de imagem ou notícia e a respectiva classe (um exemplo é dado a seguir). *A mesma pasta contém pastas “train” e “test” nelas que estão armazenados os arquivos de imagens e notícias.* Mudando esses caminhos você deve passar o dataset novo ex: data/datasets/img_medium/train.txt
 
 ### Por fim, o campo “classifier” indica qual classificador deve ser usado pelo programa (“knn” ou “nc”). 
 
