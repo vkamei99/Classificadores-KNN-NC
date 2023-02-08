@@ -23,7 +23,7 @@ class NewsDataset(DatasetInterface):
         if 'train' in path:
             """ identificar as palavras diferentes e salvar em um arquivo """
             palavras_escritas = []
-            arquivo = open("todas_as_palavras", 'w')
+            arquivo = open("src/datasets/todas_as_palavras", 'w')
             for i in range(len(self.news_name)):
                 new_path = self.path[:-4] + "/" + self.news_name[i]
                 todas_as_palavras = self.le_noticia(new_path)
@@ -34,7 +34,7 @@ class NewsDataset(DatasetInterface):
                         arquivo.write(p + "\n")
             arquivo.close()
 
-        with open('todas_as_palavras', 'r') as f:
+        with open('src/datasets/todas_as_palavras', 'r') as f:
             self.palavras = f.read().split()
 
     def size(self) -> int:
