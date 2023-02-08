@@ -1,10 +1,24 @@
 # Teste de Classificadores
 O trabalho consiste em criar um programa que permita comparar a performance de dois algoritmos de classificação (KNN, NC) em duas bases de dados diferentes: imagens(sem cores) e noticias(textos).
 
+# Instalação
+Para poder rodar deve se instalar a biblioteca OpenCV que pode ser instalada com o seguintes comandos:
+* Linux
+
+    sudo apt-get update
+    sudo apt-get install python3-opencv
+
+* Windows
+
+    pip install opencv-python
+
+para instalar a biblioteca, você precisa ter o Python e o pip (gerenciador de pacotes do Python) já instalados em seu sistema. Se você ainda não os tem, siga as instruções de instalação relevantes para o seu sistema operacional antes de prosseguir com a instalação da biblioteca OpenCV.
+
 # Como Usar
 O programa deverá ser executado usando a linha de comando abaixo:
 
     python main.py data/configs/config.json data/reports/report.txt
+
 na qual, config.json é um arquivo de configuração contendo informações de entrada para o programa e report.txt é o caminho do arquivo onde os dados de saída do experimento devem ser salvos. No diretório data/configs, existe 1 arquivo de configuração ja pronto.
 
 O arquivo config.json receberá como entrada um arquivo de configuração do tipo JSON como ilustrado abaixo. O campo “type” indica o tipo do dataset que pode ser “image” ou “news” (notícias). 
@@ -18,6 +32,7 @@ Uma execução do programa consiste em avaliar um classificador específico em u
         "test_path": "data/datasets/img_small/test.txt",
         "classifier": "knn"
     }
+
 exemplo do train.txt:
 
     train.txt
@@ -39,5 +54,13 @@ O arquivo de saída (report.txt no exemplo) deve armazenar a acurácia do classi
     inference time per sample: 0.2s
     accuracy: 0.85
 
+# Observações
+* O projeto possui seu proprio sistema para vetorização de imagems e textos
+* Foi usado um template dado pelo professor
 
+# Autores
+Este projeto foi feito por:
+* Viktor Kamei Mota
+* Arthur Christ Marcolan
+* Enzo Dorigheto
 
