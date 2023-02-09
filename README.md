@@ -84,3 +84,6 @@ Este projeto foi feito por:
 * Arthur Christ Marcolan
 * Enzo Dorigheto
 
+## Licença 
+
+The [MIT License]() (MIT)
