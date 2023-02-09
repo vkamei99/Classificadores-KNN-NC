@@ -1,13 +1,13 @@
-Dataset: news
-Path: data/datasets/news-tiny/train.txt
+Dataset: image
+Path: data/datasets/img_medium/train.txt
 Classifier: NC
-Training time per sample: 0.0205s
-Inference time per sample: 0.0052s
-Accuracy: 0.44
+Training time per sample: 0.4455s
+Inference time per sample: 0.0126s
+Accuracy: 0.8
 
-Dataset: news
-Caminho: data/datasets/news-tiny/train.txt
+Dataset: image
+Caminho: data/datasets/img_medium/train.txt
 Classificador: NC
-Tempo de treino por amostra: 0.0205s
-Tempo de inferencia por amostra: 0.0052s
-Precisao: 0.44
+Tempo de treino por amostra: 0.4455s
+Tempo de inferencia por amostra: 0.0126s
+Precisao: 0.8
