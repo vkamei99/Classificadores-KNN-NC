@@ -31,7 +31,7 @@ na qual, config.json é um arquivo de configuração contendo informações de e
 
 ## Mudando o Dataset e o Algoritimo:
 
-No diretório data/configs, existe um arquivo de configuração ja pronto. Você deve mudá-lo para testar o outro algoritmo ou o outro dataset segue abaixo como usá-lo de forma coerente com o codigo.
+No diretório data/configs/ , existe um arquivo de configuração ja pronto. Você deve mudá-lo para testar o outro algoritmo ou o outro dataset segue abaixo como usá-lo de forma coerente com o codigo.
 
 * O campo “type” indica o tipo do dataset que pode ser “image”(dataset de imagens) ou “news”(dataset de texto). 
 
@@ -39,7 +39,8 @@ No diretório data/configs, existe um arquivo de configuração ja pronto. Você
 
 * O campo “classifier” indica qual classificador deve ser usado pelo programa (“knn” ou “nc”). 
 
-Exemplo do config.json
+### Exemplo do config.json
+data/configs/config.json
 
     config.json
     {
@@ -52,6 +53,7 @@ Exemplo do config.json
 [Config.json](https://github.com/vkamei99/Classificadores-KNN-NC/blob/main/data/configs/config.json)
 
 exemplo do train.txt:
+data/reports/report
 
     train/c3719052006int.txt int
     train/3903082005int.txt int
@@ -62,6 +64,8 @@ exemplo do train.txt:
     train/c1906052005poc.txt poc
     #estes são os nomes dos arquivos de noticia
  
+[report](https://github.com/vkamei99/Classificadores-KNN-NC/blob/main/data/reports/report.txt)
+
 ## O arquivo de saída 
 
 vai armazenar a acurácia do classificador, o tempo de treinamento por amostra e o tempo de predição por amostra . Um exemplo é dado abaixo:
