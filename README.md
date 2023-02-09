@@ -76,6 +76,8 @@ vai armazenar a acurácia do classificador, o tempo de treinamento por amostra e
 * O projeto possui seu proprio sistema para vetorização de imagems e textos
 * Para ajudar na organização do projeto foi usado um template dado pelo professor: Filipe Mutz
 
+* No arquivo src/datasets/image_dataset.py no metodo get na linha 34 existe uma variavel "printar" se ela for True todas as imagens do dataset antes de serem vetorizadas vão aparecer na tela com o titulo do seu respectivo dataset
+
 # Autores
 Este projeto foi feito por:
 * Viktor Kamei Mota
