@@ -68,6 +68,4 @@ class NewsDataset(DatasetInterface):
                 index = self.palavras.index(i)
                 vetor_frequencia[index] += 1
 
-        # print(vetor_frequencia)
-
         return vetor_frequencia, self.news_class[idx]
