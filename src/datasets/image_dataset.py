@@ -31,7 +31,7 @@ class ImageDataset(DatasetInterface):
         img_vector = np.ndarray.flatten(img)#transforma a imagem em vetor
 
         #printar as imagens na tela
-        printar = True
+        printar = False
         if printar:
             tempo_tela = 50
             start_time = time.time()
