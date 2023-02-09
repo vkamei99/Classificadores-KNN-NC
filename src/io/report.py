@@ -11,7 +11,9 @@ def write_report(path: str, config: Dict, metrics_values) -> None:
                   f'Training time per sample: {round(metrics_values["training_time_per_sample"], 4)}s\n' 
                   f'Inference time per sample: {round(metrics_values["inference_time_per_sample"], 4)}s\n' 
                   f'Accuracy: {round(metrics_values["accuracy"], 2)}\n\n'
+
                   #tradução pt-br ;)
+                  
                   f'Dataset: {config["type"]}\n'
                   f'Caminho: {config["train_path"]}\n' 
                   f'Classificador: {config["classifier"].upper()}\n' 
