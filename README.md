@@ -86,4 +86,4 @@ Este projeto foi feito por:
 
 ## Licença 
 
-The [MIT License]() (MIT)
+The [MIT License](https://github.com/vkamei99/Classificadores-KNN-NC/blob/main/LICENSE) (MIT)
