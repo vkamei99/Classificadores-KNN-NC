@@ -52,7 +52,7 @@ data/configs/config.json
 
 [Config.json](https://github.com/vkamei99/Classificadores-KNN-NC/blob/main/data/configs/config.json)
 
-exemplo do train.txt:
+### exemplo do train.txt:
 data/reports/report
 
     train/c3719052006int.txt int
