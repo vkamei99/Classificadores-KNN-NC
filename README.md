@@ -49,6 +49,8 @@ Exemplo do config.json
         "classifier": "knn"
     }
 
+[Config.json](https://github.com/vkamei99/Classificadores-KNN-NC/blob/main/data/configs/config.json)
+
 exemplo do train.txt:
 
     train/c3719052006int.txt int
