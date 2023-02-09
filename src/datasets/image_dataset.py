@@ -2,6 +2,7 @@ from typing import Tuple, Any, Dict
 from .dataset_interface import DatasetInterface
 import cv2
 import numpy as np
+import time
 
 class ImageDataset(DatasetInterface):
     def __init__(self, path: str) -> None:
@@ -27,7 +28,23 @@ class ImageDataset(DatasetInterface):
         new_path = self.path[:-4] + "/" + self.image_name[idx]#"data/datasets/img/train(ou test).txt" --> "data/datasets/img/train/image[idx]"
 
         img = cv2.imread(new_path, cv2.IMREAD_GRAYSCALE)#carrega a imagem em tons de cinza
-        img_vector = np.ndarray.flatten(img)
+        img_vector = np.ndarray.flatten(img)#transforma a imagem em vetor
+
+        #printar as imagens na tela
+        printar = False
+        if printar:
+            tempo_tela = 50
+            start_time = time.time()
+            img_larger = cv2.resize(img, (img.shape[1] * 10, img.shape[0] * 10), interpolation = cv2.INTER_CUBIC)
+            if "train" in new_path:
+                name = "Train"
+            else:
+                name = "Test"
+            cv2.imshow(f"{name} Dataset", img_larger)
+            while True:
+                if (time.time() - start_time) * 1000 >= tempo_tela or cv2.waitKey(1) == 27:
+                    break
+            cv2.destroyAllWindows()
 
         return img_vector.tolist(), self.image_class[idx]
 
