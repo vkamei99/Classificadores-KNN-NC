@@ -1,13 +1,13 @@
 Dataset: image
 Path: data/datasets/img_small/train.txt
 Classifier: NC
-Training time per sample: 0.0011s
-Inference time per sample: 0.0s
+Training time per sample: 0.6772s
+Inference time per sample: 0.0132s
 Accuracy: 0.87
 
 Dataset: image
 Caminho: data/datasets/img_small/train.txt
 Classificador: NC
-Tempo de treino por amostra: 0.0011s
-Tempo de inferencia por amostra: 0.0s
+Tempo de treino por amostra: 0.6772s
+Tempo de inferencia por amostra: 0.0132s
 Precisao: 0.87
