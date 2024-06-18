@@ -64,8 +64,6 @@ data/reports/report
     train/c1906052005poc.txt poc
     #estes são os nomes dos arquivos de noticia
  
-[report](https://github.com/vkamei99/Classificadores-KNN-NC/blob/main/data/reports/report.txt)
-
 ## O arquivo de saída 
 
 vai armazenar a acurácia do classificador, o tempo de treinamento por amostra e o tempo de predição por amostra . Um exemplo é dado abaixo:
@@ -77,6 +75,8 @@ vai armazenar a acurácia do classificador, o tempo de treinamento por amostra e
     training time per sample: 0.01s
     inference time per sample: 0.2s
     accuracy: 0.85
+
+[report](https://github.com/vkamei99/Classificadores-KNN-NC/blob/main/data/reports/report.txt)
 
 # Observações
 * O projeto possui seu proprio sistema para vetorização de imagems e textos
